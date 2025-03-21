@@ -1,0 +1,129 @@
+/* Space Background */
+body {
+    margin: 0;
+    padding: 0;
+    background: black; /* Keep the background as is */
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Stars Effect */
+.stars {
+    width: 100%;
+    height: 100vh;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: twinkle 3s infinite linear;
+}
+
+/* Moon */
+.moon {
+    width: 100px;
+    height: 100px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg') no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px white;
+    animation: moon-glow 4s infinite alternate;
+}
+
+/* Blowing Text Effect */
+.blow-text {
+    font-size: 2em;
+    display: inline-block;
+    animation: blow 2s infinite alternate;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+}
+
+/* Sections */
+section {
+    margin: 50px auto;
+    width: 80%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 20px white;
+    transition: 0.3s;
+}
+
+section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px white;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin: 5px 0;
+}
+
+form input, form textarea {
+    width: 80%;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+/* Social Media Links */
+.social-media {
+    margin-top: 15px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+}
