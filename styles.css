@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: black; /* Keep the background as is */
+    background: black; /* Keep the background as specified */
     color: white;
     font-family: Arial, sans-serif;
     text-align: center;
@@ -19,19 +19,31 @@ body {
     animation: twinkle 3s infinite linear;
 }
 
+@keyframes twinkle {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
 /* Moon */
 .moon {
-    width: 100px;
-    height: 100px;
+    width: 80px; /* Reduced size */
+    height: 80px; /* Reduced size */
     background: url('https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg') no-repeat center;
     background-size: cover;
     border-radius: 50%;
     position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0 0 20px white;
-    animation: moon-glow 4s infinite alternate;
+    top: 15%; /* Adjust the vertical position */
+    left: 80%; /* Position it to the right */
+    transform: translate(-50%, -50%); /* Center the moon */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Reduced opacity in shadow */
+    opacity: 0.5; /* Lower opacity */
+    z-index: -1; /* Ensure it stays in the background */
+}
+
+@keyframes moon-glow {
+    0% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+    100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
 }
 
 /* Blowing Text Effect */
@@ -39,6 +51,11 @@ body {
     font-size: 2em;
     display: inline-block;
     animation: blow 2s infinite alternate;
+}
+
+@keyframes blow {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.1); opacity: 0.8; }
 }
 
 /* Navigation */
@@ -80,45 +97,12 @@ section:hover {
     box-shadow: 0 0 40px white;
 }
 
-/* Gallery */
-.gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.gallery img {
-    width: 200px;
+/* Profile Photo */
+.profile-photo {
+    width: 150px; /* Adjust size as needed */
     height: auto;
-    margin: 10px;
-}
-
-/* Contact Form */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form label {
-    margin: 5px 0;
-}
-
-form input, form textarea {
-    width: 80%;
-    margin: 5px 0;
-    padding: 10px;
-}
-
-/* Social Media Links */
-.social-media {
-    margin-top: 15px;
-}
-
-.social-media a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
+    border-radius: 50%; /* Makes it a circle */
+    margin-top: 20px;
 }
 
 /* Footer */
